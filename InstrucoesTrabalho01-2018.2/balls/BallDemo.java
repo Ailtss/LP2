@@ -100,18 +100,16 @@ public class BallDemo
 
 		public void drawFrame()
 		{
-			myCanvas.erase();
-			myCanvas.setForegroundColor(Color.black);
+				myCanvas.erase();
+				myCanvas.setForegroundColor(Color.black);
 
         // the shape to draw and move
         int xPos = 20;
+				int yPos = 20;
 				int altura = HEIGHT-42; //42 = Distância de pixels
 				int largura = WIDTH-42;
-        Rectangle rect = new Rectangle(20, 20, largura, altura);
+        Rectangle rect = new Rectangle(xPos, yPos, largura, altura);
 
-        // move the rectangle across the screen
-        
-        // at the end of the move, draw and fill once more so that it remains visible
         myCanvas.draw(rect);
 
 
