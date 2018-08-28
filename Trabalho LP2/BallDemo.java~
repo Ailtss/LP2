@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.Rectangle;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.awt.Dimension;
 import java.util.Random;
 
@@ -49,12 +48,11 @@ public class BallDemo
 	
 				else
 				{
-						myCanvas.erase();
 						Dimension tam = myCanvas.getSize();
 						Color[] cores = {Color.red, Color.green, Color.orange, Color.gray, Color.blue};
 						int ground = ((tam.height*90)/100) ;   // position of the ground line(MODIFICADO)
         		int xStart = 20;    // x-start of the ground line(MODIFICADO)
-        		int xLimit = (tam.width-20);   // x-limit of the ground line(MODIFICADO)
+        		int xLimit = (tam.width-22);   // x-limit of the ground line(MODIFICADO)
 						Random ran = new Random();
 						
 
@@ -88,12 +86,13 @@ public class BallDemo
 											if(balls.get(i).getXPosition() >= xLimit - 20)
 												{
 													balls.get(i).erase();
+													balls.remove(i);
 												}
 										}
 										
 							
 
-							if(balls.size() == 0)
+							if(balls.isEmpty())
 								{
 									finished = true;
                	}
@@ -101,6 +100,7 @@ public class BallDemo
        		 }
        		
 				}
+
 
 
    	}

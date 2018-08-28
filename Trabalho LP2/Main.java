@@ -7,18 +7,17 @@ public class Main
 
 				BallDemo b = new BallDemo();
 	
-				b.drawFrame();
-				b.bounce(5);
+			
 
-				System.out.println("Digite 1 para redimensionar");
+				System.out.println("Digite o número de bolas: ");
 				Scanner reader = new Scanner(System.in);
 				int n = reader.nextInt();	
 				reader.close();
-				if(n == 1)
-				{
-					b.drawFrame();
-				}
-	
+				b.drawFrame();
+				b.bounce(n);
+
+				System.exit(0);
+				
 
 				
 			
