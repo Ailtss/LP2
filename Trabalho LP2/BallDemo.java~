@@ -49,6 +49,7 @@ public class BallDemo
 	
 				else
 				{
+						myCanvas.erase();
 						Dimension tam = myCanvas.getSize();
 						Color[] cores = {Color.red, Color.green, Color.orange, Color.gray, Color.blue};
 						int ground = ((tam.height*90)/100) ;   // position of the ground line(MODIFICADO)
